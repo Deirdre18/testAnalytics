@@ -16,14 +16,13 @@ export class AnalyticsService {
   analyticsEnabled = true;
  
   constructor( private router: Router) {
-    this.initFb();
     this.router.events.pipe(
       filter((e: RouterEvent) => e instanceof NavigationEnd),
     ).subscribe((e: RouterEvent) => {
       console.log('route changed: ', e.url);
       this.setScreenName(e.url)
     });
-  } 
+  }   
   
   setUser() {
     // Use Firebase Auth uid
