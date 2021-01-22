@@ -1,0 +1,7 @@
+{
+  "name": "testAnalytics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
